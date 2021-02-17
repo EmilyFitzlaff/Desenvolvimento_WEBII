@@ -4,6 +4,7 @@
 
         if(file_exists($arquivo)) {
             require $arquivo;
+            var_dump($arquivo);
         }
     });
 ?>

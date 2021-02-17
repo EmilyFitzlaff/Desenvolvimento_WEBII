@@ -29,11 +29,11 @@
         }
 
         function getMetaCharset() {
-            return '<meta charset='. $this->charset .'>';
+            return '<meta charset="'. $this->charset .'">';
         }
 
         function getViewport() {
-            return '<meta name='. $this->name .' content='. $this->content.'>';
+            return '<meta name="'. $this->name .'" content="'. $this->content.'">';
         }
     }
 ?>
