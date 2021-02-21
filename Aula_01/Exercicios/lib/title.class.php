@@ -2,6 +2,7 @@
     class Title {
         private $texto;
 
+        
         function __construct($texto) {
             $this->texto = $texto;
         }
