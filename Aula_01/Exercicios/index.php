@@ -29,4 +29,7 @@
 
     $h1 = new H("Teste", "1");
     echo $h1;
+
+    $button = new Button("submit", "enviar", "enviar", "qualquer", "idqualquer", "Emily");
+    echo $button;
 ?>

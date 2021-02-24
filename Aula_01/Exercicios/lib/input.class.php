@@ -21,14 +21,47 @@
         }
 
         public function __toString() {
-            return '<input type ="'. $this->type .'" 
-                           name ="'. $this->name .'"
-                           id ="'. $this->id .'"
-                           checked ="'. $this->checked .'"
-                           disabled ="'. $this->disabled .'"
-                           class ="'. $this->class .'"
-                           required ="'. $this->required .'"
-                           placeholder ="'. $this->placeholder .'">'; 
+            $input = "<input ";
+
+            if ($this->type != "") {
+                $input .= " type='{$this->type}' ";
+            }
+
+            if ($this->name != "") {
+                $input .= " name='{$this->name}' ";
+            }
+
+            if ($this->value != "") {
+                $input .= " value='{$this->value}' ";
+            }
+
+            if ($this->class != "") {
+                $input .= " class='{$this->class}' ";
+            }
+
+            if ($this->id != "") {
+                $input .= " id='{$this->id}' ";
+            }
+
+            if ($this->placeholder != "") {
+                $input .= " placeholder='{$this->placeholder}' ";
+            }
+
+            if ($this->checked != "") {
+                $input .= " checked ";
+            }
+
+            if ($this->required != "") {
+                $input .= " required ";
+            }
+
+            if ($this->disabled != "") {
+                $input .= " disabled ";
+            }
+
+            $input .= "/>";
+
+            return $input;
         }  
     }
 ?>

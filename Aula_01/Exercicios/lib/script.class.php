@@ -12,10 +12,21 @@
         }
 
         function __toString() {
-            return '<script src="'. $this->src .' 
-                            integrity="'. $this->integrity .'" 
-                            crossorigin="'. $this->crossorigin.'"></script>';
+            $script = "<script ";
 
+            if ($this->src != "") {
+                $script .= " src='{$this->src}' ";
+            }
+
+            if ($this->integrity != "") {
+                $script .= " integrity='{$this->integrity}' ";
+            }
+
+            if ($this->crossorigin != "") {
+                $script .= " crossorigin='{$this->crossorigin}' ";
+            }
+            
+            $script .= "></script>";
         }
     }
 

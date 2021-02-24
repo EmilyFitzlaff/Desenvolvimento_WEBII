@@ -14,7 +14,25 @@
         }
 
         function __toString() {
-            return '<link href="'. $this->url .'" rel="'. $this->rel .'" integrity="'. $this->integrity .'" crossorigin="'. $this->crossorigin.'">';
+            $link = "<link ";
+
+            if ($this->url != "") {
+                $link .= " href='{$this->url}' ";
+            }
+
+            if ($this->rel != "") {
+                $link .= " rel='{$this->rel}' ";
+            }
+
+            if ($this->integrity != "") {
+                $link .= " integrity='{$this->integrity}' ";
+            }
+
+            if ($this->crossorigin != "") {
+                $link .= " crossorigin='{$this->crossorigin}' ";
+            }
+
+            $link .= "/>";
         }
     }
 ?>
