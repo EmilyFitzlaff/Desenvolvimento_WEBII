@@ -4,36 +4,31 @@
         private $name;
         private $content;
 
-        function getCharset() {
-            return $this->charset;
-        }
-
-        function setCharset($charset) {
+        function __construct($charset, $name, $content) {
             $this->charset = $charset;
-        }
-
-        function getName() {
-            return $this->name;
-        }
-
-        function setName($name) {
             $this->name = $name;
-        }
-
-        function getContent() {
-            return $this->content;
-        }
-
-        function setContent($content) {
             $this->content = $content;
         }
 
-        function getMetaCharset() {
-            return '<meta charset="'. $this->charset .'">';
+        function __toString() {
+            $meta = "<meta ";
+
+            if ($this->charset != '') {
+                $meta .= "charset='{$this->charset}'";
+            }
+
+            if ($this->name != '') {
+                $meta .= "name='{$this->name}'";
+            }
+
+            if ($this->content != '') {
+                $meta .= "content='{$this->content}'";
+            }
+
+            $meta .= "/>";
+
+            return $meta;
         }
 
-        function getViewport() {
-            return '<meta name="'. $this->name .'" content="'. $this->content.'">';
-        }
     }
 ?>
