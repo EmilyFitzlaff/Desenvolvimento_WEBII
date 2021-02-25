@@ -14,15 +14,15 @@
             $meta = "<meta ";
 
             if ($this->charset != '') {
-                $meta .= "charset='{$this->charset}'";
+                $meta .= " charset='{$this->charset}' ";
             }
 
             if ($this->name != '') {
-                $meta .= "name='{$this->name}'";
+                $meta .= " name='{$this->name}' ";
             }
 
             if ($this->content != '') {
-                $meta .= "content='{$this->content}'";
+                $meta .= " content='{$this->content}' ";
             }
 
             $meta .= "/>";
