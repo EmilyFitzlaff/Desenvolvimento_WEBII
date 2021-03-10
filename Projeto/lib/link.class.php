@@ -32,7 +32,9 @@
                 $link .= " crossorigin='{$this->crossorigin}' ";
             }
 
-            $link .= "/>";
+            $link .= "/>\n";
+
+            return $link;
         }
     }
 ?>

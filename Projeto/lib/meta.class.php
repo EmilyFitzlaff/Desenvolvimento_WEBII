@@ -25,7 +25,7 @@
                 $meta .= " content='{$this->content}' ";
             }
 
-            $meta .= "/>";
+            $meta .= "/>\n";
 
             return $meta;
         }

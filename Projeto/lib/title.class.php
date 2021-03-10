@@ -7,7 +7,7 @@
         }
 
         function __toString() {
-            return '<title>'. $this->texto .'</title>';
+            return "<title>{$this->texto}</title>\n";
         }
     }
 ?>

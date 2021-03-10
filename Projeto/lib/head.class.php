@@ -3,7 +3,9 @@
         private $elementos = array();
         
         public function addElemento($elemento) {
-            $this->elementos[] = $elemento;
+            foreach ($elemento as $item) {
+                $this->elementos[] = $item;
+            }            
         }
     
         public function __toString(){
